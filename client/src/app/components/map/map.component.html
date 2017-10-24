@@ -1,0 +1,79 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="map">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]=true [zoomControl]="true" (mapClick)="mapClicked($event)">
+
+                    <agm-marker *ngFor="let m of markers;let i=index" (markerClick)="clickedMarker(m, i)" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
+
+                        <agm-snazzy-info-window [maxWidth]="220" [closeWhenOthersOpen]="false" [border]="true" [placement]="right" [isOpen]="true">
+                            <ng-template>
+                                <strong>{{m.name}}</strong><br>
+                                <a class="delete" (click)="removeMarker(m)">Delete!!</a>
+                            </ng-template>
+                        </agm-snazzy-info-window>
+                    </agm-marker>
+                </agm-map>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add New Marker</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form (submit)="addMarker()">
+                        <div class="col-md-2">
+                            <label>Location Name</label>
+                            <input type="text" [(ngModel)]="markerName" name="markerName">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label>Location latitude</label>
+                            <input type="text" [(ngModel)]="markerLat" name="markerLat">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label>Location longitude</label>
+                            <input type="text" [(ngModel)]="markerLng" name="markerLng">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label>Draggable</label>
+                            <select [(ngModel)]="markerDraggable" name="markerDraggable">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Map it!">
+                            <a class="delete" (click)="removeMarker(m)">Delete!!</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div> -->
+
+<mat-card>
+
+    <mat-card-title>
+        <!-- <a href='https://mzl.la/2vvxj25' target='_blank'> -->
+        Mozilla Holy-Grail Layout
+        <!-- </a> -->
+    </mat-card-title>
+    <mat-card-subtitle>
+        Illustrated here is the case where the page layout suited to a browser window must be optimized for a smart phone window. Not only must the elements reduce in size, but the order in which they are presented must change. Flexbox makes this very simple
+    </mat-card-subtitle>
+    <mat-card-content>
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </mat-card-content>
+</mat-card>

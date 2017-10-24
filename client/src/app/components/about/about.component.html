@@ -1,0 +1,51 @@
+<mat-card class='card-demo'>
+    <mat-card-title>
+        <!-- <a href='https://mzl.la/2vvxj25' target='_blank'> -->
+        Mozilla Holy-Grail Layout
+        <!-- </a> -->
+    </mat-card-title>
+    <mat-card-subtitle>
+        Illustrated here is the case where the page layout suited to a browser window must be optimized for a smart phone window. Not only must the elements reduce in size, but the order in which they are presented must change. Flexbox makes this very simple
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div class="containerX">
+            <div class="colorNested box" fxLayout="column">
+                <header class="welcome">
+                    <div class="md-card-wrapper">
+                        <md-card>
+                            <img [src]="intro">
+                        </md-card>
+                        <p class="welcome-overlay">Welcome to my</p>
+                        <br>
+                        <h1 class="welcome-overlay">Portfolio</h1>
+                    </div>
+                </header>
+                <div class="about-me" fxLayoutAlign="start stretch" id="main" [fxLayout]="direction" fxLayout.xs="column" fxFlex (click)="toggleDirection()">
+                    <nav fxFlex="1 6 20%" fxFlexOrder fxFlexOrder.xs="2">
+                        <div class="md-card-wrapper">
+                            <md-card>
+                                <img id="w1" [src]="welcome1Image"> nav
+                            </md-card>
+                        </div>
+                    </nav>
+                    <article fxFlex="3 1 80%" fxFlexOrder fxFlexOrder.xs="3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quis voluptatum, iste quia non sed exercitationem, mollitia tempore placeat magnam doloribus rerum consequatur amet blanditiis itaque! Nesciunt odio quod, doloribus
+                        optio quae autem mollitia officia tempore maiores ab iure inventore voluptatem impedit voluptate possimus expedita dolorum ipsa odit, esse asperiores aliquam nemo unde. Autem quibusdam saepe, ducimus inventore maiores ab tempore
+                        provident possimus in vitae, voluptatum deserunt! Quas eaque voluptate, enim quisquam est voluptatem culpa animi. Aut amet maiores aliquid.</article>
+                    <aside fxFlex="1 6 20%" fxFlexOrder fxFlexOrder.xs="2">
+                        <div class="md-card-wrapper">
+                            <md-card>
+                                <img id="w1" [src]="welcome2Image"> nav
+                            </md-card>
+                        </div>
+                        aside</aside>
+                </div>
+                <footer>footer</footer>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-footer class="bottomPad">
+        <div class="hint">
+            <div fxLayout="{{ direction }}" fxLayout.xs="column"></div>
+        </div>
+    </mat-card-footer>
+</mat-card>

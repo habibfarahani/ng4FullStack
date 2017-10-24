@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,900|Six+Caps');
+
+
+$ff-s: 'Merriweather', serif;
+$ff-ss: 'Six Caps', sans-serif;
+
+/* font weigh normal 400 Bold 900 */
+$fw-n: 400;
+$fw-b: 800;

@@ -1,0 +1,110 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+/* mat-card {
+    width: 50%;
+} */
+
+.config-avatar {
+    width: 50%;
+    font-family: sans-serif;
+    font-feature-settings: 'liga';
+    /* border: 3px solid black; */
+    /* background: red;
+    color: blue; */
+}
+
+.config-avatar1 {
+    width: 50%;
+    /* height: 100%; */
+    /* border: 3px solid red; */
+}
+
+.avater-label {
+    padding-right: 20px;
+}
+
+.avatar,
+.ipv4-config {
+    background: rgba(68, 68, 139, 0.253);
+    align-items: left;
+    vertical-align: text-top;
+    padding-right: 20px;
+}
+
+.ipv4-list {
+    padding-top: 100px;
+    padding-left: 0px;
+    height: 80%;
+}
+
+mat-card-title {
+    font-size: 0.80rem;
+}
+
+.ipv6-config {
+    background: rgba(37, 37, 129, 0.24);
+    padding-left: 10px;
+    width: 100%p;
+}
+
+.config-avatar1 {
+    width: 100%
+}
+
+.mat-radio-button~.mat-radio-button {
+    padding-right: 16px;
+}
+
+
+/* mat-list {
+    align-items: vertical;
+} */
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container>* {
+    width: 100%;
+}
+
+.example-container form {
+    margin-bottom: 20px;
+}
+
+.example-container form>* {
+    margin: 5px 0;
+}
+
+.example-container .mat-radio-button {
+    margin: 0 5px;
+}
+
+.ipv4-config mat-form-field {
+    padding-right: 50px;
+    width: 300px;
+    border: 1px solid blue;
+}

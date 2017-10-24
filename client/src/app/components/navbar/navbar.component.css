@@ -1,0 +1,45 @@
+@import url("../../../styles/styles.css");
+@media (min-width: 768px) {
+    .navbar-nav {
+        color: yellow;
+    }
+}
+
+
+/* .navbar {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width:768px) {
+    #nav_center {
+        width: 700px;
+    }
+}
+
+.navbar-brand {
+    color: lightblue;
+    font-size: 2.125rem;
+    color: block;
+    text-transform: uppercase;
+}
+
+.nav-link .container {
+    color: yellow;
+    margin-top: 0;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.navbar {
+    background-color: black;
+    border: 1px solid lightgray;
+    margin: 0;
+}
+
+.navbar-nav li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 10px;
+} */

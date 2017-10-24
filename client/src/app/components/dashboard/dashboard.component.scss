@@ -1,0 +1,50 @@
+//@import '~@angular/material/prebuilt-themes/purple-green.css';
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+//@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+// @mixin candy-carousel-theme($theme) {
+//     /* // Extract whichever individual palettes you need from the theme. */
+//     $primary: map-get($theme, primary);
+//     $accent: map-get($theme, accent);
+//     /* // Use mat-color to extract individual colors from a palette as necessary. */
+//     .candy-carousel {
+//         background-color: mat-color($primary);
+//         border-color: mat-color($accent, A400);
+//     }
+// }
+.container-chips {
+    padding-top: 100px;
+}
+
+.container-menu {
+    padding-top: 10px;
+}
+
+.container-tabs {
+    position: relative;
+    padding-top: 20px;
+}
+
+mat-chip {
+    // display: flex;
+    display: inline-flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    //    padding: 10px 20px;
+    // border-radius: 5;
+    width: 60px;
+    height: 20px;
+    font-family: sans-serif;
+    font-size: 0.87rem;
+    font-stretch: condensed;
+    font-weight: bold;
+    // margin: 0px;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+    //    text-transform: uppercase;
+}
+
+mat-list-item {
+    align-items: left;
+}

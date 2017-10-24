@@ -1,0 +1,116 @@
+<div class="ip-config" fxLayout="row">
+    <div class="config-avatar" id="main" fxLayout="column">
+        <mat-card class="avatar">
+            <!-- look into: https://material.io/icons/ -->
+            <p>
+                <mat-icon class="avater-label">desktop_windows</mat-icon> <label>Ip configuration</label>
+            </p>
+
+        </mat-card>
+        <mat-card class="ipv4-config">
+            <mat-card-title-group>
+                <mat-card-title>
+                    <!-- <mat-radio-group>
+                        <mat-radio-button value="1">dhcp</mat-radio-button>
+                        <mat-radio-button value="2">static</mat-radio-button>
+                    </mat-radio-group> -->
+                </mat-card-title>
+            </mat-card-title-group>
+
+            <!-- <img mat-card-mat-image> -->
+
+            <mat-list class="ipv4-list">
+                <mat-list-item *ngFor="let config of ipconfigData[selected].config">
+                    <table *ngIf="config.proto == 'IPv4'">
+                        <!-- <table> -->
+                        <tr>
+                            <mat-input-container>
+                                <input ngModel #config.address name="config.address" type="text'" matInput placeholder="ip" value="{{config.address}}" required>
+                                <!-- <mat-hint>Ip Address</mat-hint>
+                                <span matSuffix>@suffix</span>
+                                <span matPrefix>Prefix</span> -->
+                                <mat-error *ngIf="config.address.invalid && config.address.error.required">
+                                    <!-- <mat-error> -->
+                                    IP is required
+                                </mat-error>
+                            </mat-input-container>
+
+                        </tr>
+                        <tr>
+                            <mat-input-container>
+                                <input type="text" matInput placeholder="maksk">
+                            </mat-input-container>
+
+                        </tr>
+                        <tr>
+                            <mat-input-container>
+                                <input type="text" matInput placeholder="gateway">
+                            </mat-input-container>
+
+                        </tr>
+                        <tr>
+                            <mat-input-container>
+                                <input type="text" matInput placeholder="gateway">
+                            </mat-input-container>
+
+                        </tr>
+                    </table>
+
+                    <!-- <mat-list-item *ngFor="let iif of ipconfigData"> -->
+                    <!-- <mat-icon matListIcon>home</mat-icon> -->
+                    <!-- <p>{{iif.config[0].address}}</p> -->
+                    <!-- <h3 matLine> {{iif.name}} </h3>
+                        <p matLine>
+                            <span> Name1 </span>
+                            <span class="demo-2"> --name2 </span>
+                        </p> -->
+                </mat-list-item>
+            </mat-list>
+
+            <!-- <button icon="fa.fa-envelope" (click)="changeConfigStatus()">Send Message</button> -->
+
+        </mat-card>
+    </div>
+
+    <div class="config-avatar1" fxLayout="row">
+        <mat-card class="ipv6-config">
+            <mat-card-title-group *ngFor="let config of ipconfigData[selected].config">
+                <table *ngIf="config.proto == 'IPv6'">
+                    <!-- <table> -->
+                    <td>
+                        <mat-input-container>
+                            <input ngModel #config.address name="config.address" type="text'" matInput placeholder="ip" value="{{config.address}}" required>
+                            <!-- <mat-hint>Ip Address</mat-hint>
+                            <span matSuffix>@suffix</span>
+                            <span matPrefix>Prefix</span> -->
+                            <mat-error *ngIf="config.address.invalid && config.address.error.required">
+                                <!-- <mat-error> -->
+                                IP is required
+                            </mat-error>
+                        </mat-input-container>
+
+                    </td>
+                    <tr>
+                        <mat-input-container>
+                            <input type="text" matInput placeholder="maksk">
+                        </mat-input-container>
+
+                    </tr>
+                    <tr>
+                        <mat-input-container>
+                            <input type="text" matInput placeholder="gateway">
+                        </mat-input-container>
+
+                    </tr>
+                    <tr>
+                        <mat-input-container>
+                            <input type="text" matInput placeholder="gateway">
+                        </mat-input-container>
+
+                    </tr>
+                </table>
+
+            </mat-card-title-group>
+        </mat-card>
+    </div>
+</div>

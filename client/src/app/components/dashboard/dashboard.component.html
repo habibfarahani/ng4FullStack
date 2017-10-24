@@ -1,0 +1,42 @@
+<div class="container-chips">
+    <mat-chip-list>
+        <!-- <div class="col-sm-1" *ngFor='let intf of interfaces; let j=index'>
+            <div *ngIf="interfaces[j].selected">
+                <mat-chip color="primary" selected="true">{{interfaces[j].name}}</mat-chip>
+            </div>
+            <div *ngIf="!interfaces[j].selected">
+                <mat-chip>{{interfaces[j].name}}</mat-chip>
+            </div>
+        </div> -->
+        <div class="col-sm-1" *ngFor='let intf of ipconfigs; let j=index'>
+            <div *ngIf="ipconfigs[j].selected">
+                <mat-chip color="primary" selected="true">{{ipconfigs[j].name}}</mat-chip>
+            </div>
+            <div *ngIf="!ipconfigs[j].selected">
+                <mat-chip>{{ipconfigs[j].name}}</mat-chip>
+            </div>
+        </div>
+    </mat-chip-list>
+</div>
+
+<div class="container-menu">
+
+</div>
+
+<div class="container-tabs">
+    <mat-tab-group>
+        <mat-tab label="Addressing">
+            <app-ipconfig [ipconfigData]="ipconfigs" (notifyChange)="receiveChange($event)"></app-ipconfig>
+        </mat-tab>
+        <mat-tab label="Routing">
+            <app-routing></app-routing>
+        </mat-tab>
+        <mat-tab label="Logs">
+            <app-logs></app-logs>
+        </mat-tab>
+
+        <mat-tab label="Ports">
+            <app-port-map></app-port-map>
+        </mat-tab>
+    </mat-tab-group>
+</div>

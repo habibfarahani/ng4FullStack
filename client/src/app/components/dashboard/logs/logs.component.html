@@ -1,0 +1,24 @@
+<section class="example-section">
+    <mat-checkbox #getLog class="example-margin" [checked]="checked" (change)="onChange($event)">Checked</mat-checkbox>
+    <div *ngIf="getLog.checked">Obtaining the log...</div>
+    <mat-checkbox class="example-margin" (change)="onChange($event)">Indeterminate</mat-checkbox>
+</section>
+
+<mat-toolbar color="accent">
+    <span>First Row</span>
+    <span class="log-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon>Menu</button>
+    <mat-toolbar-row>
+        <span>Second Row</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+        <span>Third Row</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item> Settings </button>
+    <button mat-menu-item> Help </button>
+</mat-menu>

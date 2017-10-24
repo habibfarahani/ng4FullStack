@@ -1,0 +1,41 @@
+<!--<div class="col-md-6">
+    <div style="display: block;">
+        <canvas baseChart width="1000" height="800" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>
+<div class="col-md-6" style="margin-bottom: 100vh">
+    <table class="table table-responsive table-condensed">
+        <tr>
+            <th *ngFor="let label of lineChartLabels">{{label}}</th>
+        </tr>
+        <tr *ngFor="let d of lineChartData">
+            <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+        </tr>
+    </table>
+    <button (click)="randomize()">CLICK</button>
+</div>
+</div> -->
+
+<div class="chart-container">
+    <!-- <div class="box-1">
+            <h3>Box ----</h3>
+            <p>1</p>
+        </div> -->
+    <!-- <img src="assets/images/crestron-logo-header.png" alt=""> -->
+    <div *ngFor="let title of netCharts; let j=index">
+        <div class="chart-title">
+            <h3>Box One - {{j}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, eius nobis. Similique dolore voluptatem minus eveniet sapiente, inventore iste id sunt veritatis consequuntur delectus voluptatibus libero est et enim at?</p>
+        </div>
+        <!--{{label}}-->
+        <canvas baseChart width="400" height="200" [datasets]="netCharts[j].lineChartData" [labels]="netCharts[j].lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+        <div class="chart-box" *ngFor="let d of lineChartData">{{title}}
+            <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+        </div>
+        <button (click)="randomize()">CLICK</button>
+
+    </div>
+
+
+</div>

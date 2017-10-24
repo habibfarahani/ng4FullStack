@@ -1,0 +1,111 @@
+/* .containerX */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.colorNested {
+    min-height: 1384px;
+    /* background: #999999; */
+}
+
+.md-card-wrapper img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.md-card-wrapper p h1 {
+    position: absolute;
+    color: rgba(53, 3, 3, 0.795);
+    z-index: 2;
+    text-align: center;
+}
+
+.md-card-wrapper p {
+    position: absolute;
+    top: 20%;
+    right: 33%;
+    font-size: 3.0rem;
+    z-index: 2;
+}
+
+.md-card-wrapper h1 {
+    position: absolute;
+    top: 30%;
+    right: 31%;
+    font-size: 4.0rem;
+    z-index: 2;
+}
+
+
+/* article,
+nav,
+aside,
+header,
+footer {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7px;
+} */
+
+.about-me {
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+#main>article {
+    border-color: #cccc33;
+    background: #f5f506;
+    cursor: pointer;
+    height: 100%;
+    border: 3px solid black;
+}
+
+#w1 {
+    height: 100%;
+    width: 100%;
+}
+
+#main>nav,
+#main>aside {
+    border-color: 778888bb;
+    background: #ccccff;
+    border: 8px solid black;
+}
+
+header,
+footer {
+    border-color: #eebb55;
+    background: #ffeebb;
+}
+
+md-card>md-card-actions:last-child {
+    padding-bottom: 16px;
+}
+
+md-card>md-card-actions>button {
+    margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+    .md-card-wrapper p h1 {
+        position: absolute;
+        color: rgba(53, 3, 3, 0.795);
+        text-align: center;
+        z-index: 2;
+        font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .md-card-wrapper p {
+        top: 18%;
+        right: 38%;
+        font-size: 1.0rem;
+    }
+    .md-card-wrapper h1 {
+        top: 20%;
+        /* right: calcu(100-80); */
+        font-size: 1.0rem;
+    }
+}

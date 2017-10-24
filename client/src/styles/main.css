@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'colors';
+@import 'typography';
+@import '~bootstrap/scss/bootstrap';
+@mixin sans-serif($fs, $ls: .3em, $color: $accent, $tt: uppercase, $lh: 1) {
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color;
+    text-transform: $tt;
+    line-height: $lh;
+    font-family: $ff-ss;
+}
+
+@mixin sans-serif1($fs, $ls:0.1em, $color: $black, $tt: uppercase, $lh: 1) {
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color;
+    text-transform: $tt;
+    line-height: $lh;
+    font-family: $ff-ss;
+}
+
+@mixin sans-serif2($fs, $ls: .1em, $color: $dark-blue, $tt: initial, $lh: 0.5) {
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color;
+    text-transform: $tt;
+    line-height: $lh;
+    font-family: $ff-ss;
+}
+
+body {
+    color: $gray;
+    font-family: $ff-s;
+    line-height: 1.6;
+    background: $white;
+    font-size: 0.875rem;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h1 {
+    color: $accent;
+    line-height: 1;
+    font-size: 3.125rem;
+    span {
+        @include sans-serif($fs: 5.5rem);
+        display: block;
+        /* // font-size:5.5rem;
+        // letter-spacing: $letter-spacing;
+        // color: $accent;
+        // font-family: $ff-ss; */
+    }
+}
+
+h2 {
+    /* // font-size: 2rem;
+    // color: $dark-gray;
+    // letter-spacing: $letter-spacing;
+    // font-family: $ff-ss; */
+    @include sans-serif($fs: 2rem);
+}

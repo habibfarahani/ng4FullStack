@@ -1,0 +1,16 @@
+mat-card {
+    top: 50px;
+    position: relative;
+}
+
+agm-map {
+    height: 100vh;
+}
+
+mat-card-title {
+    top: 1px;
+}
+
+mat-card-content {
+    height: 100%;
+}

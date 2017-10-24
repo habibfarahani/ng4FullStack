@@ -1,0 +1,56 @@
+<div class="example-container">
+    <form class="example-container" [formGroup]="options">
+        <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
+        <div>
+            <label>Float placeholder: </label>
+            <mat-radio-group formControlName="floatPlaceholder">
+                <mat-radio-button value="auto">Auto</mat-radio-button>
+                <mat-radio-button value="always">Always</mat-radio-button>
+                <mat-radio-button value="never">Never</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </form>
+    <div fxLayout="row">
+        <form class="ipv4-config">
+            <mat-icon>desktop_windows</mat-icon>
+            <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatPlaceholder]="options.value.floatPlaceholder">
+                <input ngModel #ipconfigData[selected].config[0].address name="ipconfigData[selected].config[0].address" type="text'" matInput placeholder="ip" value="{{ipconfigData[selected].config[0].address}}" required>
+            </mat-form-field>
+
+            <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatPlaceholder]="options.value.floatPlaceholder">
+                <input matInput placeholder="Simple placeholder" required>
+            </mat-form-field>
+
+            <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatPlaceholder]="options.value.floatPlaceholder">
+                <mat-select required>
+                    <mat-option>-- None --</mat-option>
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+                <mat-placeholder>
+                    <mat-icon>favorite</mat-icon> <b> Fancy</b> <i> placeholder</i></mat-placeholder>
+            </mat-form-field>
+        </form>
+        <!-- </div>
+    <div fxLayout="row"> -->
+        <form class="ipv6-config">
+            <mat-icon>desktop_windows</mat-icon>
+            <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatPlaceholder]="options.value.floatPlaceholder">
+                <input ngModel #ipconfigData[selected].config[0].mask name="ipconfigData[selected].config[0].mask" type="text'" matInput placeholder="Mask" value="{{ipconfigData[selected].config[0].mask}}" required>
+            </mat-form-field>
+
+            <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatPlaceholder]="options.value.floatPlaceholder">
+                <input matInput placeholder="Simple placeholder" required>
+            </mat-form-field>
+
+            <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatPlaceholder]="options.value.floatPlaceholder">
+                <mat-select required>
+                    <mat-option>-- None --</mat-option>
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+                <mat-placeholder>
+                    <mat-icon>favorite</mat-icon> <b> Fancy</b> <i> placeholder</i></mat-placeholder>
+            </mat-form-field>
+        </form>
+    </div>
+
+</div>
